@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Algotithm - For   if...se"/>
+        <attribute name="authors" value="Jhonathan Pablo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-10 09:48:26 "/>
+        <attribute name="created" value="SmhvbmF0aGFuIFBhYmxvO0xBUFRPUC1TQ1NRSlRTNTsyMDI1LTA0LTA5OyIwODoxMjowMyAiOzM3NTc="/>
+        <attribute name="edited" value="SmhvbmF0aGFuIFBhYmxvO0xBUFRPUC1TQ1NRSlRTNTsyMDI1LTA0LTEwOyIwOTo0ODoyNiAiOzM7Mzg3NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="valorUsuario" type="Integer" array="False" size=""/>
+            <declare name="try" type="Integer" array="False" size=""/>
+            <declare name="dicaTry" type="Integer" array="False" size=""/>
+            <declare name="Rep" type="String" array="False" size=""/>
+            <declare name="S" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="78"/>
+            <assign variable="dicaTry" expression="0"/>
+            <output expression="&quot;LET'S PLAY A GAME??? VAMOS JOGAR????? S/N (RESPONDA EM MAISCULO)&quot;" newline="True"/>
+            <input variable="Rep"/>
+            <if expression="Rep = &quot;S&quot;">
+                <then>
+                    <output expression="&quot;&#201; BEM BASICO O JOGO, VOC&#202; S&#211; PRECISA ACERTAR O NUMERO PR&#201; DETERMINADO DE 0 A 100.&quot;" newline="True"/>
+                    <output expression="&quot;LET'S PLAY!&quot;" newline="True"/>
+                    <for variable="try" start="0" end="4" direction="inc" step="1">
+                        <output expression="&quot;Digite um numero de 0 a 100&quot;" newline="True"/>
+                        <input variable="valorUsuario"/>
+                        <if expression="n == valorUsuario">
+                            <then>
+                                <output expression="&quot;Congrats, you got it!!&quot;" newline="True"/>
+                                <breakpoint expression="" always="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;You made a mistake&quot;" newline="True"/>
+                                <assign variable="dicaTry" expression="dicaTry + 1"/>
+                                <if expression="dicaTry == 4">
+                                    <then>
+                                        <output expression="&quot;Quer uma dica? S/N&quot;" newline="True"/>
+                                        <input variable="Rep"/>
+                                        <if expression="Rep == &quot;S&quot;">
+                                            <then>
+                                                <output expression="&quot;DICA: O valor que procura &#233; um numero par entre 77 e 79. &lt;3&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;&#201; sua ultima tentativa, BOA SORTE! GOOD LUCK MY FRIENDO&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </for>
+                </then>
+                <else>
+                    <output expression="&quot;Que pena!! That's a pity... Quem sabe numa proxima!!&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
